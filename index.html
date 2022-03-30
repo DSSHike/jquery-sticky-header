@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+section { 
+  height: 2000px;
+  padding-top: 100px; }
+
+.main { background: orange; }
+
+.fixed {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; }
+    </style>
+
+</head>
+    <body>
+      <br>  home
+      <br>  about
+      <br>  contact
+      <br>   blog
+      <br>   services
+      <br>   services
+        <section>
+            <div class="main">This div will stick to the top</div>
+          </section>
+        
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>  
+$(window).scroll(function(){
+  var sticky = $('.main'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 200) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+    </script>
+    </body>
+</html>
